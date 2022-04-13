@@ -5,17 +5,31 @@ const wordCounter = (value) => {
   console.log(value);
 
   if (value) {
-    // COMPLETE THE LOGIC 
-    wordCount.innerHTML = `Word Count: 0`; 
+    // COMPLETE THE LOGIC
+    const choppedValue = value.split(' ');
+    // console.log(choppedValue)
+    const choppedCount = choppedValue.length;
+    // console.log(choppedCount)
+    wordCount.innerHTML = `Word Count: ${choppedCount}`; 
   } else {
     // if the value is empty, set the error message value to "Please input text"
-    error.innerHTML = ""; // UPDATE THIS
+    error.innerHTML = "Please input text"; // UPDATE THIS
   }
 }
 
 // OPTIONAL CHALLENGE
 const toggleMode = (btnText) => {
   // complete the function
+  // console.log(btnText)
+  if (btnText === 'Dark Mode') {
+    document.body.style.background = 'black';
+    document.body.style.color = 'white';
+    toggleButton.innerHTML = 'Light Mode';
+  } else {
+    document.body.style.background = 'white';
+    document.body.style.color = 'black';
+    toggleButton.innerHTML = 'Dark Mode';
+  }
 }
 
 // ************************************************ //
