@@ -1,0 +1,12 @@
+body {
+  background-color: white;
+  color: black;
+}
+
+form {
+  margin: 1em;
+}
+
+button {
+  margin: 0.2em;
+}
